@@ -1,4 +1,4 @@
-====================================================    soma de elemntos de uma matriz!     ==========================================================
+====================================================    soma de elementos de uma matriz!     ==========================================================
 
 #include<stdio.h>
 
@@ -56,4 +56,74 @@ void main(){
         }
         printf("A soma dos elementos da Matriz: %d", result);
         
+}
+
+
+
+=======================================================================    igualdade  elementos de uma matriz!     ======================================================================================
+
+
+#include<stdio.h>
+
+
+void main(){
+
+    int matriz1[3][3],matriz2[3][3];
+    int i,j;
+    int saoiguais=1; //parametro de verdade
+
+
+
+        for (i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                printf("matriz [%d] [%d] = ",i,j);
+                scanf("%d",&matriz1[i][j]);
+        }
+        }
+        printf("Primeira Matriz:\n");
+
+
+        for (i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                printf("%d\t",matriz1[i][j]);
+        }
+        printf("\n");
+        }
+
+
+        for (i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                printf("matriz [%d] [%d] = ",i,j);
+                scanf("%d",&matriz2[i][j]);
+        }
+        }
+
+        printf("Segunda Matriz:\n");
+
+        for (i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                printf("%d\t",matriz2[i][j]);
+        }
+        printf("\n");
+
+        }
+
+        //igualdade das matrizes
+
+        for(i=0; i<3;i++){
+            for(j=0;j<3;j++){
+                    if(matriz1[i][j]!=matriz2[i][j]){
+                       saoiguais=0;  //parametro de nao-verdade
+                       break;
+        }
+    }
+}
+
+    if (saoiguais){
+            printf("matrizes sao iguais");
+    }else{
+        printf("Suas matrizes nao sao iguais!");
+    }
+
+
 }
