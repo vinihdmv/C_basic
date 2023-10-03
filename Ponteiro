@@ -1,20 +1,34 @@
 
 
 
-
-int i = 7, j = 3;  //Nesta linha, duas variáveis inteiras i e j são declaradas e inicializadas com os valores 7 e 3, respectivamente.
-
-
-int *p;  //Aqui, é declarado um ponteiro para um inteiro chamado p. No entanto, neste ponto, p não está apontando para nenhum valor específico, então seu valor é indefinido até que seja atribuído.
+#include<stdio.h>
 
 
-int **r;  //Nesta linha, é declarado um ponteiro para um ponteiro para um inteiro chamado r. Assim como p, r também não está apontando para nenhum valor específico neste momento.
 
+void main(){
+                                 
+   int a = 5, b = 6, c = 7;   //inicializando as var e seus respectivos valores
+   
+   int v[10] = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90};   //vetor inicializado
+   
+   int *pt1, *pt2, *pt3;  //inicialização dop sponteitos
+   
+   pt1 = &a; //p1==5
+   
+   pt2 = &b; //p2==6
+   
+   pt3 = &c; //p3==7
+   
+   pt2 = pt1; //p2==5
+   
+   *pt3 = *pt2 + 2000;  //p3 == 2005
+   
+   pt1 = &v[8]; //p1==80
+   
+   for (int k = 0; k < 2; k++) {
+       *pt1 = *pt1 - 5; //p1==45
+       
+       pt1 = pt1 - 3; //p1==20
+   }   
 
-p = &i; //Aqui, o ponteiro p está sendo atribuído com o endereço de memória da variável i. Agora, p aponta para o endereço de i.
-
-
-r = &p;  //Nesta linha, o ponteiro r está sendo atribuído com o endereço de memória de p. Agora, r aponta para o endereço de p.
-
-
-c = **r + j; //Aqui, parece haver um erro de digitação, pois a variável c não foi declarada anteriormente no código. Se você quiser atribuir o resultado da expressão **r + j a uma variável chamada c, você deve declará-la antes dessa linha.
+}
