@@ -1,0 +1,20 @@
+
+
+
+
+int i = 7, j = 3;  //Nesta linha, duas variáveis inteiras i e j são declaradas e inicializadas com os valores 7 e 3, respectivamente.
+
+
+int *p;  //Aqui, é declarado um ponteiro para um inteiro chamado p. No entanto, neste ponto, p não está apontando para nenhum valor específico, então seu valor é indefinido até que seja atribuído.
+
+
+int **r;  //Nesta linha, é declarado um ponteiro para um ponteiro para um inteiro chamado r. Assim como p, r também não está apontando para nenhum valor específico neste momento.
+
+
+p = &i; //Aqui, o ponteiro p está sendo atribuído com o endereço de memória da variável i. Agora, p aponta para o endereço de i.
+
+
+r = &p;  //Nesta linha, o ponteiro r está sendo atribuído com o endereço de memória de p. Agora, r aponta para o endereço de p.
+
+
+c = **r + j; //Aqui, parece haver um erro de digitação, pois a variável c não foi declarada anteriormente no código. Se você quiser atribuir o resultado da expressão **r + j a uma variável chamada c, você deve declará-la antes dessa linha.
